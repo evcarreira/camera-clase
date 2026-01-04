@@ -2,17 +2,37 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Cámara Clase</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cámara de Clase</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding-top: 50px; background-color: #f0f2f5; }
+        .boton-camara {
+            background-color: #007bff;
+            color: white;
+            padding: 20px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .boton-camara:active { background-color: #0056b3; }
+    </style>
 </head>
 <body>
-    <h2 style="text-align:center; font-family: sans-serif;">Abriendo la cámara...</h2>
+
+    <h2>📷 Actividad de Clase</h2>
+    <p>Pulsa el botón para activar la cámara del móvil:</p>
+
     <input type="file" accept="image/*" capture="camera" id="lanzador" style="display:none;">
+    
+    <button class="boton-camara" onclick="abrirCamara()">ACTIVAR CÁMARA</button>
 
     <script>
-        // Cuando la página carga, hace un clic automático en el botón invisible
-        window.onload = function() {
+        function abrirCamara() {
             document.getElementById('lanzador').click();
-        };
+        }
     </script>
+
 </body>
 </html>
