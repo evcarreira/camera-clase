@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cámara Clase</title>
+</head>
+<body>
+    <h2 style="text-align:center; font-family: sans-serif;">Abriendo la cámara...</h2>
+    <input type="file" accept="image/*" capture="camera" id="lanzador" style="display:none;">
+
+    <script>
+        // Cuando la página carga, hace un clic automático en el botón invisible
+        window.onload = function() {
+            document.getElementById('lanzador').click();
+        };
+    </script>
+</body>
+</html>
